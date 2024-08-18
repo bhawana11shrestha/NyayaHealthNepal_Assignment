@@ -1,0 +1,115 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "To-Do API",
+      "description": "A simple To-Do API",
+      "version": "1.0.0"
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "tasks",
+        "description": "Operations related to tasks"
+      }
+    ],
+    "paths": {
+      "/tasks": {
+        "get": {
+          "tags": ["tasks"],
+          "summary": "Get all tasks",
+          "responses": {
+            "200": {
+              "description": "A list of tasks"
+            }
+          }
+        },
+        "post": {
+          "tags": ["tasks"],
+          "summary": "Create a new task",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "task",
+              "description": "Task to create",
+              "schema": {
+                "$ref": "#/definitions/Task"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "The created task"
+            }
+          }
+        }
+      },
+      "/tasks/{task_id}": {
+        "put": {
+          "tags": ["tasks"],
+          "summary": "Update an existing task",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "task_id",
+              "required": true,
+              "type": "integer"
+            },
+            {
+              "in": "body",
+              "name": "task",
+              "description": "Task to update",
+              "schema": {
+                "$ref": "#/definitions/Task"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "The updated task"
+            },
+            "404": {
+              "description": "Task not found"
+            }
+          }
+        },
+        "delete": {
+          "tags": ["tasks"],
+          "summary": "Delete a task",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "task_id",
+              "required": true,
+              "type": "integer"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Task deleted"
+            },
+            "404": {
+              "description": "Task not found"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Task": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "done": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+  

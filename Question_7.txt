@@ -1,0 +1,23 @@
+Question 7: Consider the following code and find the output and Explain it in breif.
+A. String s1 = "Java";
+B. String s2 = "Java";
+C. StringBuilder sb1 = new StringBuilder();
+D. sb1.append("Ja").append("va");
+
+E. System.out.println(s1 == s2);
+F. System.out.println(s1.equals(s2));
+G. System.out.println(sb1.toString() == s1);
+H. System.out.println(sb1.toString().equals(s1));
+Answer:
+a. true is printed out exactly once.
+b. true is printed out exactly twice.
+c. true is printed out exactly three times.
+d. true is printed out exactly four times.
+e. The code does not compile.
+
+
+Answer: c. true is printed out exactly three times.
+because:  System.out.println(s1 == s2);: true (since s1 and s2 are interned and refer to the same object).
+          System.out.println(s1.equals(s2));: true (since both strings have the same content).
+          System.out.println(sb1.toString() == s1);: false (since sb1.toString() creates a new string object).
+          System.out.println(sb1.toString().equals(s1));: true (since both strings have the same content).

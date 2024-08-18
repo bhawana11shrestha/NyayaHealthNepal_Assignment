@@ -1,0 +1,27 @@
+Bahmni Overview
+Bahmni is an open-source hospital management system specifically designed for low-resource environments. It offers a comprehensive suite of tools for managing patient care, administration, billing, inventory, and human resources. The platform is built upon a modular architecture, allowing for flexibility and customization to suit diverse healthcare settings.   
+
+
+
+Core Components and Functionalities:
+Bahmni-Core:
+It serves as the central module that integrates with other Bahmni modules. 
+It handles the core functionalities such as patient management, appointment scheduling, and medical records.
+
+OpenMRS:
+It acts as the backend system for electronic medical records.
+Bahmni-Core integrates with OpenMRS to manage patient records, clinical data, and health information.
+
+OpenERP (Odoo):
+It provides ERP functionalities for managing administrative and financial tasks.
+Bahmni-Core integrates with OpenERP (Odoo) for managing inventory, billing, and financial records.
+
+OpenELIS:
+It is a laboratory information management system.
+Bahmni-Core integrates with OpenELIS to manage laboratory tests, results, and reporting.
+
+
+Significance of Bahmni-Core Module:
+Bahmni-Core serves as the integration layer between OpenMRS, OpenERP (Odoo), and OpenELIS, ensuring seamless data flow between these systems.
+It provides core functionalities such as patient registration, appointment scheduling, and record management.
+It allows for customization and extension to meet specific healthcare requirements. 

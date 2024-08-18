@@ -1,0 +1,28 @@
+Question 8: What will be the output of the following code and why?
+public class _C
+{ private static int $;
+public static void main(String main[])
+{
+String a_b;
+System.out.print($);
+System.out.print(a_b);
+}
+}
+
+Answer:
+(a) Compiler error at line 1.
+(b) Compiler error at line 2.
+(c) Compiler error at line 4.
+(d) Compiler error at line 5.
+(e) Compiler error at line 8.
+
+
+
+
+Answer is: (e) Compiler error at line 8.
+because, 
+Line 1: The declaration of the class _C is correct. There is no compiler error at line 1.
+Line 2: The declaration of the static integer variable $ is correct. There is no compiler error at line 2.
+Line 4: The declaration of the local variable a_b is correct. There is no compiler error at line 4.
+Line 5: The System.out.print($); statement is correct and will print 0. There is no compiler error at line 5.
+Line 8: The System.out.print(a_b); statement will cause a compiler error because a_b is not initialized before use. The compiler requires local variables to be initialized.
