@@ -1,0 +1,39 @@
+Task Overview
+The task involved setting up and building the Bahmni-Core module, which is part of the Bahmni open-source platform for healthcare management. The goal was to clone the repository, build the project, and generate the .omod file.
+
+Steps Taken
+1.	Cloning the Repository:
+o	Cloned the Bahmni-Core repository from GitHub using the URL: https://github.com/Bahmni/bahmni-core.
+o	Bash code: git clone https://github.com/Bahmni/bahmni-core.git
+
+2.	Setting Up the Environment:
+o	Ruby Installation: Installed Ruby 2.2 or higher, as required by the project.
+o	Compass Installation: Installed Compass 1.0.3 to compile Sass files, which are used for styling in the project.
+o	Bundler: Installed Bundler to manage Ruby gem dependencies, ensuring the correct versions are used. 
+o	Bash code: gem install bundler -v 2.4.22
+               gem install compass
+
+3.	Building the Project:
+o	Navigated to the cloned repository and executed Maven commands to build the project. The build process involves compiling the source code and creating the .omod file, which is a module file for OpenMRS.
+o	Bash code: cd bahmni-core
+o	Bash Code: ./mvnw clean install -DskipTests
+
+4.	Handling Errors:
+o	Addressed issues related to missing Sass files and incorrect file paths. Ensured that the necessary files like variables.scss were either created or correctly referenced.
+o	Managed Maven build errors by configuring environment variables and updating Maven settings.
+
+5.	Final Output:
+o	The build was successful, generating the .omod file. The file bahmnicore-omod-1.2.0-SNAPSHOT.omod was found in the target directory.
+
+Challenges Faced
+•	Dependency Issues: Encountered issues with Ruby gem installations due to SSL certificate verification failures and version mismatches. Resolved by adjusting Ruby and gem versions.
+•	File Path Errors: Faced errors related to missing or unreadable Sass files. Fixed by verifying and correcting file paths in the config.rb file and ensuring all required files were present.
+
+Solution Summary
+•	Ensured the environment was correctly set up with appropriate versions of Ruby, Compass, and Bundler.
+•	Corrected file paths and configurations to successfully compile Sass files and build the project.
+•	Successfully built the project and generated the .omod file, which is essential for deploying the module in OpenMRS.
+
+Conclusion
+The task was completed successfully by addressing various configuration and dependency issues. The .omod file generated can now be used with OpenMRS to extend its functionality with the Bahmni-Core module.
+
